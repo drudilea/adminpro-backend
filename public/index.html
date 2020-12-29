@@ -1,42 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <!-- Favicon icon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/images/favicon.png"
+    />
+    <title>Adminpro</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link
+      href="/assets/plugins/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link href="/assets/css/style.css" rel="stylesheet" />
+    <!-- You can change the theme colors from here -->
+    <link id="theme" rel="stylesheet" />
+
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="google-signin-client_id"
       content="92260652024-j99d87g8kqo7mp63nme3bcnfphji2kas.apps.googleusercontent.com"
     />
+    <script src="https://apis.google.com/js/platform.js"></script>
+  <link rel="stylesheet" href="styles.0374098738608ecf7d8b.css"></head>
+  <body class="fix-header card-no-border fix-sidebar">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+      <div class="loader">
+        <div class="loader__figure"></div>
+        <p class="loader__label">Admin Pro</p>
+      </div>
+    </div>
 
-    <title>Demo Login</title>
-  </head>
-  <body>
-    <h1>Google Sign-in</h1>
-    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <app-root></app-root>
 
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-
-    <a href="#" onclick="signOut();">Sign out</a>
-
-    <script>
-      function onSignIn(googleUser) {
-        var profile = googleUser.getBasicProfile();
-        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-        console.log('Name: ' + profile.getName());
-        console.log('Image URL: ' + profile.getImageUrl());
-        console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-
-        var id_token = googleUser.getAuthResponse().id_token;
-        console.log(id_token);
-      }
-
-      // Cerrar sesión
-      function signOut() {
-        var auth2 = gapi.auth2.getAuthInstance();
-        auth2.signOut().then(function () {
-          console.log('User signed out.');
-        });
-      }
-    </script>
-  </body>
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="assets/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="assets/plugins/bootstrap/js/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="assets/js/perfect-scrollbar.jquery.min.js"></script>
+    <!--Wave Effects -->
+    <script src="assets/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="assets/js/sidebarmenu.js"></script>
+    <!--stickey kit -->
+    <script src="assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
+    <script src="assets/plugins/sparkline/jquery.sparkline.min.js"></script>
+    <!--Custom JavaScript -->
+    <script src="assets/js/custom.js"></script>
+  <script src="runtime-es2015.25cda0c3ab0bce94e487.js" type="module"></script><script src="runtime-es5.25cda0c3ab0bce94e487.js" nomodule defer></script><script src="polyfills-es5.2de5710a38718c218cd2.js" nomodule defer></script><script src="polyfills-es2015.4eb191482be2254421ff.js" type="module"></script><script src="main-es2015.dfeb29a7cb192ae0edb7.js" type="module"></script><script src="main-es5.dfeb29a7cb192ae0edb7.js" nomodule defer></script></body>
 </html>

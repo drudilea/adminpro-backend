@@ -76,7 +76,7 @@ const obtenerImagen = async (req, res = response) => {
   if (fs.existsSync(pathImg)) {
     res.sendFile(pathImg);
   } else {
-    const pathImg = path.join(__dirname, `../uploads/no-img.jpg`);
+    const pathImg = path.join(__dirname, `../uploads/no-image.jpg`);
     res.sendFile(pathImg);
   }
 };

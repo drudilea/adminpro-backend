@@ -3,6 +3,7 @@ require('dotenv').config();
 
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 
 const { dbConnection } = require('./database/config');
 
@@ -28,6 +29,11 @@ app.use('/api/medicos', require('./routes/medicos'));
 app.use('/api/todo', require('./routes/busquedas'));
 app.use('/api/uploads', require('./routes/uploads'));
 app.use('/api/login', require('./routes/auth'));
+
+// Ruta por defecto
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'public/index.html'));
+});
 
 // Escuchar peticiones en un puerto determinado
 app.listen(process.env.PORT, () => {
