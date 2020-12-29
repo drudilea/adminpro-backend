@@ -1,3 +1,8 @@
+# Project folders
+uploads/hospitales/*
+uploads/medicos/*
+uploads/usuarios/*
+
 # Logs
 logs
 *.log
